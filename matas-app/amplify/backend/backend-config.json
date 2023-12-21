@@ -1,0 +1,43 @@
+{
+  "api": {
+    "api6bd8329b": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "LambdaMatasApp"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    }
+  },
+  "function": {
+    "LambdaMatasApp": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_LambdaMatasApp_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "LambdaMatasApp"
+        }
+      ]
+    },
+    "AMPLIFY_function_LambdaMatasApp_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "LambdaMatasApp"
+        }
+      ]
+    }
+  }
+}
